@@ -24,9 +24,9 @@ changesdonepipeline{
             }
         }
         stage('UnitTest'){
-            agent any
+            agent {label 'win_slave'}
             steps{
-                git 'https://github.com/Akshay27031993/01-11-2022.git'
+                git 'https://github.com/devops-trainer/DevOpsClassCodes.git'
                 sh 'mvn test'
             }
         }
@@ -37,7 +37,7 @@ changesdonepipeline{
             }
         }
         stage('Package'){
-            agent any
+            agent {label 'win_slave'}
             steps{
                 sh 'mvn package'
             }
