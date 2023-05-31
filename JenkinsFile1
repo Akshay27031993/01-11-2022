@@ -22,7 +22,6 @@ changesdonepipeline{
         stage('UnitTest'){
             agent any
             steps{
-                git 'https://github.com/Akshay27031993/01-11-2022.git'
                 sh 'mvn test'
             }
         }
