@@ -1,5 +1,4 @@
 changesdonepipeline{
-    }
     agent any
     stages{
         stage('Checkout on git'){
